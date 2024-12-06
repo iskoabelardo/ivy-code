@@ -187,7 +187,54 @@ body {
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image is cropped correctly */
     margin-bottom: 15px; /* Add spacing below the image */
-    border: 2px solid #000000; /* Optional: Add a border */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 10px; /* Adds space between the icon and the text */
+    margin-bottom: 20px; /* Optional spacing below the profile container */
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column; /* Stacks text vertically */
+    align-items: flex-start; /* Aligns text to the left */
+    font-size: 18px;
+    color: #333;
+}
+
+.welcome-line {
+    font-size: 16px;
+    font-weight: normal;
+    color: #777; /* Subtle color for "Welcome" */
+    display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
+    gap: 5px; /* Adds space between the icon and the text */
+}
+
+.welcome-line i {
+    font-size: 18px; /* Adjust size of the hand icon */
+}
+
+.name-line {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000000; /* Darker color for emphasis on the name */
 }
 
 .profile1 h2 {
