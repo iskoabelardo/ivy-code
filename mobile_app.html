@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Payment App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo"> CTT <span>PAYMO</span></div>
+            <div class="status">
+                <div class="time">12:53 PM</div>
+                <div class="battery">
+                    <i class="fa fa-battery-half" aria-hidden="true"></i> 51%
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="wallet-section" class="content-section">
+                <div class="wallet-balance">
+                    <h2>Wallet Balance</h2>
+                    <div class="wallet-balance-box">
+                        <h1 id="wallet-balance">₱7,805.32</h1>
+                    </div>
+                    <button class="add-btn" id="add-funds-btn">+ Cash In</button>
+                </div>
+                <button class="primary-btn" id="pay-ride-btn">Pay for Ride</button>
+                <div class="qr-section">
+                    <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Payment" alt="QR Code">
+                </div>
+            </section>
+
+            <section id="profile-section" class="content-section hidden">
+                <div class="profile1">
+                    <h2>Your Profile</h2>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <img src="maris.jpg" alt="Profile Picture">
+                    </div>
+                    <p><strong>Name:</strong> Maris_420!</p>
+                    <p><strong>Email:</strong> joshuakakkoii@gmail.com</p>
+                    <p><strong>Phone:</strong> +0955555TUNA</p>
+                </div>
+                <button class="primary-btn" id="back-to-wallet-btn">Back to Wallet</button>
+            </section>
+        </main>
+
+        <nav class="nav-bar">
+            <button class="nav-item" id="wallet-btn">
+                <i class="fa-solid fa-wallet"></i> Wallet
+            </button>
+            <button class="nav-item" id="profile-btn">
+                <i class="fa-solid fa-user"></i> Profile
+            </button>
+        </nav>
+
+        <div class="modal hidden" id="transaction-modal">
+            <div class="modal-content">
+                <h2>Pay for Ride</h2>
+                <p>Enter the amount to pay:</p>
+                <input type="number" id="transaction-amount" placeholder="Enter amount" min="0">
+                <div class="modal-actions">
+                    <button class="primary-btn" id="confirm-payment-btn">Confirm</button>
+                    <button class="secondary-btn" id="cancel-payment-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal hidden" id="add-funds-modal">
+            <div class="modal-content">
+                <h2>Select Payment Method</h2>
+                <input type="number" id="add-amount" placeholder="Enter amount to add" min="0" required>
+                <ul class="payment-methods">
+                    <li id="gcash">💳 GCash</li>
+                    <li id="bpi">💳 BPI</li>
+                    <li id="bdo">💳 BDO</li>
+                    <li id="security-bank">💳 Security Bank</li>
+                    <li id="paypal">💳 PayPal</li>
+                </ul>
+                <div class="modal-actions">
+                    <button class="primary-btn" id="confirm-add-funds-btn">Confirm</button>
+                    <button class="secondary-btn" id="cancel-add-funds-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #4caf50;
+    color: white;
+    align-items: center;
+    font-size: 16px;
+}
+
+.header .logo span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.status {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #4caf50;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-item:hover {
+    color: #333;
+}
+
+.content-section {
+    padding: 15px;
+    text-align: center;
+    display: none;
+}
+
+.content-section:not(.hidden) {
+    display: block;
+}
+
+.wallet-balance h2 {
+    color: #000000;
+    margin: 10px 0;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.wallet-balance-box {
+    background-color: #e8f5e9; /* Light green background */
+    border: 2px solid #4caf50; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Adds space inside the box */
+    text-align: center; /* Centers text within the box */
+    display: inline-block; /* Fits content size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 300px; /* Optional: limit width for responsiveness */
+    margin-bottom: 20px;
+}
+
+#wallet-balance {
+    color: #4caf50; /* Text color matching the border */
+    font-size: 36px; /* Large font size for emphasis */
+    margin: 0; /* Removes default margin */
+}
+
+.primary-btn, .secondary-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 50%;
+    transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #45a049;
+}
+
+.secondary-btn:hover {
+    background-color: #FF4545;
+}
+
+.add-btn {
+    background-color: #f39c12;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #e67e22;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 350px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qr-section {
+    margin-top: 20px;
+}
+
+#profile-section {
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ensures it fills the screen */
+}
+
+.profile-picture img {
+    width: 100px; /* Set the size of the image */
+    height: 100px; /* Ensure height matches width */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image is cropped correctly */
+    margin-bottom: 15px; /* Add spacing below the image */
+    border: 2px solid #000000; /* Optional: Add a border */
+}
+
+.profile1 h2 {
+    color: #000000;
+    margin: 10px 0;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between the items */
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto; /* Center the list horizontally */
+    text-align: center; /* Align the list items horizontally */
+    display: block; /* Ensure block layout */
+}
+
+.payment-methods li {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block; /* Make list items appear inline while maintaining padding */
+}
+
+.payment-methods li:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .primary-btn, .secondary-btn {
+        font-size: 14px;
+    }
+
+    .add-btn {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .nav-item {
+        font-size: 18px;
+    }
+}
